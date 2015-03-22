@@ -1,0 +1,19 @@
+// example link:http://jsbin.com/juyexi/1/edit?html,css,output
+
+@mixin triangle($w:40px,$dirc:up,$color:black){
+    width: 0;
+    border-style:dashed;
+    border-width:$w;
+    @if $dirc == 'up'{
+        border-color: transparent transparent $color transparent;
+    }
+    @if $dirc == 'down'{
+        border-color: $color transparent transparent transparent;
+    }
+    @if $dirc == 'right'{
+        border-color: transparent transparent transparent $color;
+    }
+    @if $dirc == 'left'{
+        border-color:transparent $color transparent transparent;
+    }
+}
